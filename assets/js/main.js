@@ -4,11 +4,6 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Template Name: Davix
-  | Author: Laralink
-  | Version: 1.0.0
-  |--------------------------------------------------------------------------
-  |--------------------------------------------------------------------------
   | TABLE OF CONTENTS:
   |--------------------------------------------------------------------------
   |
@@ -25,6 +20,7 @@
   | 11. particles
   | 12. Ripple
   | 13. Parallax Effect
+  | 14. Initialize LightGallery
   */
 
   /*--------------------------------------------------------------
@@ -514,4 +510,55 @@
       }
     });
   }
-})(jQuery); // End of use strict
+})(jQuery); 
+
+
+  /*--------------------------------------------------------------
+    14. Initialize LightGallery
+  --------------------------------------------------------------*/
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   lightGallery(document.querySelector('.st-lightgallery'), {
+  //     selector: '.st-lightbox-item', // Select all items with this class
+  //     mode: 'lg-slide',            // Enable carousel mode
+  //     controls: true,              // Enable left/right navigation arrows
+  //     download: false,             // Disable download button
+  //     counter: true,               // Display image count
+  //     slideEndAnimatoin: true,     // Enable slide animation
+  //   });
+  // });
+
+
+  /*--------------------------------------------------------------
+    14. Load More Button
+  --------------------------------------------------------------*/
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const loadMoreButton = document.getElementById("loadMore");
+    const hiddenItems = document.querySelectorAll(".portfolio-item.hidden");
+  
+    loadMoreButton.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent default link behavior
+      let count = 0; // Counter to track how many items to show per click
+  
+      hiddenItems.forEach((item) => {
+        if (count < 3 && item.classList.contains("hidden")) {
+          item.classList.remove("hidden");
+          item.style.display = "block"; // Make the item visible
+          count++;
+        }
+      });
+  
+      // If no more items to show, hide the "Load More" button
+      if (document.querySelectorAll(".portfolio-item.hidden").length === 0) {
+        loadMoreButton.style.display = "none";
+      }
+    });
+  });
+  
+
+
+
+
+
+
+// End of use strict
