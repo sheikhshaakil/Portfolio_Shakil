@@ -269,7 +269,7 @@
 
   /*--------------------------------------------------------------
     10. Slick Slider
-  --------------------------------------------------------------*/ 
+  --------------------------------------------------------------*/
   function slickInit() {
     $('.st-slider').each(function () {
       // Slick Variable
@@ -354,7 +354,7 @@
   }
   /*--------------------------------------------------------------
     11. particles
-  --------------------------------------------------------------*/ 
+  --------------------------------------------------------------*/
   function particles() {
     if ($.exists('#particles-js')) {
       particlesJS("particles-js", {
@@ -488,7 +488,7 @@
     13. Parallax Effect
   --------------------------------------------------------------*/
   function parallaxEffect() {
-    $('.st-parallax').each(function() {
+    $('.st-parallax').each(function () {
       var windowScroll = $(document).scrollTop(),
         windowHeight = $(window).height(),
         barOffset = $(this).offset().top,
@@ -510,51 +510,51 @@
       }
     });
   }
-})(jQuery); 
+})(jQuery);
 
 
-  /*--------------------------------------------------------------
-    14. Initialize LightGallery
-  --------------------------------------------------------------*/
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   lightGallery(document.querySelector('.st-lightgallery'), {
-  //     selector: '.st-lightbox-item', // Select all items with this class
-  //     mode: 'lg-slide',            // Enable carousel mode
-  //     controls: true,              // Enable left/right navigation arrows
-  //     download: false,             // Disable download button
-  //     counter: true,               // Display image count
-  //     slideEndAnimatoin: true,     // Enable slide animation
-  //   });
-  // });
+/*--------------------------------------------------------------
+  14. Initialize LightGallery
+--------------------------------------------------------------*/
+// document.addEventListener('DOMContentLoaded', function () {
+//   lightGallery(document.querySelector('.st-lightgallery'), {
+//     selector: '.st-lightbox-item', // Select all items with this class
+//     mode: 'lg-slide',            // Enable carousel mode
+//     controls: true,              // Enable left/right navigation arrows
+//     download: false,             // Disable download button
+//     counter: true,               // Display image count
+//     slideEndAnimatoin: true,     // Enable slide animation
+//   });
+// });
 
 
-  /*--------------------------------------------------------------
-    14. Load More Button
-  --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+  14. Load More Button
+--------------------------------------------------------------*/
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const loadMoreButton = document.getElementById("loadMore");
-    const hiddenItems = document.querySelectorAll(".portfolio-item.hidden");
-  
-    loadMoreButton.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevent default link behavior
-      let count = 0; // Counter to track how many items to show per click
-  
-      hiddenItems.forEach((item) => {
-        if (count < 3 && item.classList.contains("hidden")) {
-          item.classList.remove("hidden");
-          item.style.display = "block"; // Make the item visible
-          count++;
-        }
-      });
-  
-      // If no more items to show, hide the "Load More" button
-      if (document.querySelectorAll(".portfolio-item.hidden").length === 0) {
-        loadMoreButton.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  const loadMoreButton = document.getElementById("loadMore");
+  const hiddenItems = document.querySelectorAll(".portfolio-item.hidden");
+
+  loadMoreButton.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default link behavior
+    let count = 0; // Counter to track how many items to show per click
+
+    hiddenItems.forEach((item) => {
+      if (count < 3 && item.classList.contains("hidden")) {
+        item.classList.remove("hidden");
+        item.style.display = "block"; // Make the item visible
+        count++;
       }
     });
+
+    // If no more items to show, hide the "Load More" button
+    if (document.querySelectorAll(".portfolio-item.hidden").length === 0) {
+      loadMoreButton.style.display = "none";
+    }
   });
-  
+});
+
 
 
 
