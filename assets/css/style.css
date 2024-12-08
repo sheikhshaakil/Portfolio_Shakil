@@ -1096,7 +1096,7 @@ hr {
 }
 
 .st-hero.st-style1 .st-hero-text h2 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 34px;
   font-weight: 300;
   color: #a9adb8;
@@ -1131,7 +1131,7 @@ hr {
 
 @media screen and (max-width: 768px) {
   .st-social-group {
-    right: 5%; /* Adjust for mobile */
+    right: -5%; /* Adjust for mobile */
   }
 }
 
@@ -1470,7 +1470,7 @@ canvas {
   }
 
   .st-hero.st-style1 .st-hero-text h1 {
-    font-size: 80px;
+    font-size: 68px;
   }
 }
 
