@@ -1126,8 +1126,15 @@ hr {
   position: absolute;
   bottom: 30px;
   padding-left: 12px;
-  right: 5%;
+  right: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .st-social-group {
+    right: 5%; /* Adjust for mobile */
+  }
+}
+
 
 .st-hero.st-style2 {
   height: 100vh;
