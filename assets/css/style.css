@@ -3237,3 +3237,18 @@ button:hover {
   display: none;
   /* Hide elements */
 }
+
+
+
+.st-main-header-left svg,
+.st-main-header-left img {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .st-main-header-left svg,
+  .st-main-header-left img {
+    width: 130px; /* Smaller size for mobile */
+  }
+}
